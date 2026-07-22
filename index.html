@@ -152,8 +152,30 @@
     color: var(--orange);
   }
 
+  .nav-ctas{
+    display:flex;
+    align-items:center;
+    gap: 10px;
+  }
+
+  .btn-whatsapp{
+    background: var(--surface-raised);
+    color: var(--ink);
+    border: 1px solid var(--line-strong);
+  }
+  .btn-whatsapp svg{ flex-shrink:0; color: #3fd17a; }
+  .btn-whatsapp:hover{
+    border-color: #3fd17a;
+    color: #3fd17a;
+  }
+  .btn-whatsapp:hover svg{ color: #3fd17a; }
+
   @media (max-width: 860px){
     nav.links{ display:none; }
+  }
+
+  @media (max-width: 560px){
+    .btn-whatsapp span.wa-label{ display:none; }
   }
 
   /* ---------- HERO ---------- */
@@ -551,7 +573,13 @@
       <a href="#simbologia">Simbologia</a>
       <a href="#ecossistema">Ecossistema</a>
     </nav>
-    <a class="btn btn-primary" href="https://www.linkedin.com/company/azion-consultoria/" target="_blank" rel="noopener">Falar com a Azion</a>
+    <div class="nav-ctas">
+      <a class="btn btn-whatsapp" href="https://wa.me/5592981311061" target="_blank" rel="noopener" aria-label="Fale com especialista pelo WhatsApp">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.3 0-.5 0-.1-.7-1.6-.9-2.2-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1.1 2.8 1.2 3c.1.2 2.1 3.2 5.1 4.4.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.3-.1-.2-.3-.3-.6-.4z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.3c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3C4 14 3.6 12.5 3.6 12c0-4.6 3.8-8.4 8.4-8.4s8.4 3.8 8.4 8.4-3.8 8.4-8.4 8.4z"/></svg>
+        <span class="wa-label">Fale com especialista</span>
+      </a>
+      <a class="btn btn-primary" href="https://www.linkedin.com/company/azion-consultoria/" target="_blank" rel="noopener">Falar com a Azion</a>
+    </div>
   </div>
 </header>
 
@@ -571,6 +599,10 @@
         </div>
 
         <div class="hero-ctas" style="margin-top:32px;">
+          <a class="btn btn-whatsapp" href="https://wa.me/5592981311061" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.3 0-.5 0-.1-.7-1.6-.9-2.2-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1.1 2.8 1.2 3c.1.2 2.1 3.2 5.1 4.4.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.3-.1-.2-.3-.3-.6-.4z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.3c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3C4 14 3.6 12.5 3.6 12c0-4.6 3.8-8.4 8.4-8.4s8.4 3.8 8.4 8.4-3.8 8.4-8.4 8.4z"/></svg>
+            <span class="wa-label">Fale com especialista</span>
+          </a>
           <a class="btn btn-primary" href="https://www.linkedin.com/company/azion-consultoria/" target="_blank" rel="noopener">Conversar no LinkedIn</a>
           <a class="btn btn-ghost" href="#conceito">Entender o VMO</a>
         </div>
@@ -943,6 +975,10 @@
           <p>Fale com a Azion Consultoria e entenda como estruturar um VMO alinhado à realidade da sua empresa.</p>
         </div>
         <div class="cta-actions">
+          <a class="btn btn-whatsapp" href="https://wa.me/5592981311061" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.3 0-.5 0-.1-.7-1.6-.9-2.2-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1.1 2.8 1.2 3c.1.2 2.1 3.2 5.1 4.4.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.3-.1-.2-.3-.3-.6-.4z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.3c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3C4 14 3.6 12.5 3.6 12c0-4.6 3.8-8.4 8.4-8.4s8.4 3.8 8.4 8.4-3.8 8.4-8.4 8.4z"/></svg>
+            <span class="wa-label">Fale com especialista</span>
+          </a>
           <a class="btn btn-primary" href="https://www.linkedin.com/company/azion-consultoria/" target="_blank" rel="noopener">Ver perfil no LinkedIn</a>
         </div>
       </div>
@@ -961,6 +997,7 @@
       </div>
     </div>
     <div class="footer-links">
+      <a href="https://wa.me/5592981311061" target="_blank" rel="noopener">WhatsApp</a>
       <a href="https://www.linkedin.com/company/azion-consultoria/" target="_blank" rel="noopener">LinkedIn</a>
       <a href="#conceito">O que é VMO</a>
       <a href="#comparativo">VMO x PMO</a>

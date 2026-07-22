@@ -85,8 +85,10 @@
   }
   .nav-inner{
     display:flex;
+    flex-wrap: nowrap;
     align-items:center;
     justify-content: space-between;
+    gap: 20px;
     padding: 14px 32px;
     max-width: var(--maxw);
     margin: 0 auto;
@@ -96,6 +98,7 @@
     align-items:center;
     gap: 12px;
     text-decoration:none;
+    flex-shrink: 0;
   }
   .brand img{
     height: 38px;
@@ -107,17 +110,22 @@
     font-weight:600;
     font-size: 19px;
     letter-spacing: 0.04em;
+    white-space: nowrap;
   }
   .brand-text span{ color: var(--orange); }
 
   nav.links{
     display:flex;
-    gap: 32px;
+    flex-shrink: 1;
+    min-width: 0;
+    gap: 26px;
     font-size: 14.5px;
     color: var(--muted);
+    overflow: hidden;
   }
   nav.links a{
     text-decoration:none;
+    white-space: nowrap;
     transition: color .2s ease;
   }
   nav.links a:hover{ color: var(--ink); }
@@ -127,11 +135,13 @@
     font-size: 13px;
     letter-spacing: 0.04em;
     text-decoration:none;
+    white-space: nowrap;
     padding: 11px 20px;
     border-radius: var(--radius);
     display:inline-flex;
     align-items:center;
     gap: 8px;
+    flex-shrink: 0;
     transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
   }
   .btn-primary{
@@ -155,6 +165,7 @@
   .nav-ctas{
     display:flex;
     align-items:center;
+    flex-shrink: 0;
     gap: 10px;
   }
 
@@ -170,13 +181,20 @@
   }
   .btn-whatsapp:hover svg{ color: #3fd17a; }
 
-  @media (max-width: 860px){
+  /* Nav responsive steps: links go first, then labels shrink to icons, brand text last */
+  @media (max-width: 1180px){
     nav.links{ display:none; }
   }
-
-  @media (max-width: 560px){
+  @media (max-width: 640px){
+    .nav-inner{ padding: 12px 20px; }
+    .btn{ padding: 10px 14px; }
     .btn-whatsapp span.wa-label{ display:none; }
+    .nav-ctas .btn-primary{ padding: 10px 14px; font-size: 12px; }
   }
+  @media (max-width: 420px){
+    .brand-text{ display:none; }
+  }
+
 
   /* ---------- HERO ---------- */
   .hero{
